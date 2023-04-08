@@ -28,6 +28,6 @@ def read_root():
 def read_item(keyID: Union[str, None] = None, userIP: Union[str, None] = None):
     if keyVerify(keyID, userIP):
         return {"result":"success", "message":"successfully verified key by {}.".format(userIP)}
-    if keyVerify(keyID, userIP):
+    else:
         return {"result":"false", "message":"verify failed."}
     
